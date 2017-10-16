@@ -1,6 +1,6 @@
 let allQuestions = [
-  {question: "Pytanie 1", choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"], correctAnswer:0},
-  {question: "Pytanie 2", choices: ["David ", "Gordon ", "Winston ", "Tony "], correctAnswer:0},
+  {question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend dictum felis, quis pretium tortor fringilla ut. Morbi dictum massa sed tincidunt dignissim.", choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"], correctAnswer:0},
+  {question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend dictum felis, quis pretium tortor fringilla ut. Morbi dictum massa sed tincidunt dignissim.", choices: ["David ", "Gordon ", "Winston ", "Tony "], correctAnswer:0},
   {question: "Pytanie 3", choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"], correctAnswer:0}
 ];
 
@@ -96,6 +96,8 @@ let quiz = {
 
     showResult : function() {
       this.settings.questionsWrapTag.hide();
+      this.settings.resultsTag.html(`Udało Ci się poprawnie odpowiedzieć na ${this.results.points} pytań z ${allQuestions.length}`)
+
     },
 
 
