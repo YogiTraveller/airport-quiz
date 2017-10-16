@@ -10,11 +10,17 @@ var allQuestions = [
 var quiz = {
 
     settings: {
+      var wrap = ;
+      var question = ;
+
+
+      // var context = {title: "My New Post", body: "This is my first post!"};
+      // var html    = template(context);
 
     },
 
 
-    
+
 
 
 }
