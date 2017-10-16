@@ -1,26 +1,108 @@
-
-
-var allQuestions = [
-  {question: "Who is Prime Minister of the United Kingdom?", choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"], correctAnswer:0},
-  {question: "Who is Prime Minister of the United Kingdom?", choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"], correctAnswer:0},
-  {question: "Who is Prime Minister of the United Kingdom?", choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"], correctAnswer:0}
+let allQuestions = [
+  {question: "Pytanie 1", choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"], correctAnswer:0},
+  {question: "Pytanie 2", choices: ["David ", "Gordon ", "Winston ", "Tony "], correctAnswer:0},
+  {question: "Pytanie 3", choices: ["David Cameron", "Gordon Brown", "Winston Churchill", "Tony Blair"], correctAnswer:0}
 ];
 
 
-var quiz = {
+let quiz = {
 
     settings: {
-      var wrap = ;
-      var question = ;
+      questionsWrapTag: $('.questions-wrap'),
+      choicesTag: $('.choices'),
+      questionTag: $('.question'),
+      questionNumberTag: $('.queNr'),
+      questionIndex: 0, // index in array, starts with 0
+      nextButtonTag: $('.submit'),
+      resultsTag: $('.results'),
+    },
+
+    init: function() {
+      this.generateHtml();
+      this.choiceListener();
+      this.buttonNextListener();
+    },
+
+    generateHtml: function() {
+      var $this = $(this);
+      let currentQue = allQuestions[this.settings.questionIndex].question;
+      let currentChoices = allQuestions[this.settings.questionIndex].choices;
+      let queNr = this.settings.questionIndex + 1;
+      // genereate question
+      this.settings.questionNumberTag.html(queNr);
+      this.settings.questionTag.html(currentQue);
+
+      //genereate choices
+      for(var i = 0; i < allQuestions[this.settings.questionIndex].choices.length; i++) {
+        $(this.settings.choicesTag).append('<li class="radio">' + allQuestions[this.settings.questionIndex].choices[i] + '</li>');
+      }
+    },
+
+    userChoice: function() {
+      let $this = $(this);
+      let userChoice = $this.val();
+      $this.addClass('selected').siblings().removeClass('selected');
+
+    },
+
+    choiceListener: function() {
+      this.settings.choicesTag.on('click', 'li.radio', this.userChoice);
+    },
+
+    buttonNextListener: function() {
+      this.settings.nextButtonTag.on('click', this.nextQuestion);
+    },
+
+    nextQuestion: function() {
+      var selected = quiz.settings.choicesTag.children('li').hasClass('selected');
+      if (selected === false) {
+        alert('Odpowiedz na pytanie')
+      } else {
+        quiz.storeAnswer();
+        quiz.checkChoice();
+
+        if (userAnswers.length < allQuestions.length) {
+          quiz.settings.choicesTag.empty();
+          quiz.settings.questionIndex++;
+          quiz.generateHtml();
+        } else {
+          quiz.showResult();
+        }
+      }
+    },
+
+    storeAnswer: function() {
+      let selected = $('.selected').html();
+      userAnswers.push(selected);
+    },
 
 
-      // var context = {title: "My New Post", body: "This is my first post!"};
-      // var html    = template(context);
+    checkChoice: function() {
+      let correctAnswerIndex = allQuestions[this.settings.questionIndex].correctAnswer;
+      let correctAnswer = allQuestions[this.settings.questionIndex].choices[correctAnswerIndex]
+      if (correctAnswer === userAnswers[this.settings.questionIndex]) {
+        this.results.points++
+        console.log(this.results.points);
+        return true;
+      } else {
+        console.log(false)
+        return false
+      }
+    },
 
+    results: {
+      points: 0
+    },
+
+    showResult : function() {
+      this.settings.questionsWrapTag.hide();
     },
 
 
 
-
-
 }
+
+let userAnswers = [];
+
+
+quiz.init();

@@ -5,24 +5,24 @@
    <title>Quiz</title>
    <meta name="description" content="">
 
-   <link rel="stylesheet" src="css/app.css">
+   <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
 
   <main>
     <section>
-       <div class="wrap">
+       <div class="questions-wrap">
          <h1>Quiz </h1>
-         <h2>Question nr <span class="Qnr">1</span></h2>
+         <h2>Question nr <span class="queNr"></span></h2>
          <h3 class="question">Who is Prime Minister</h3>
-         <ul class="answers">
-            <li class="radio">anser1</li>
-            <li class="radio">anser2</li>
-            <li class="radio">anser3</li>
+         <ul class="choices">
          </ul>
-         <button>Next question</button>
-       </form>
+         <button class="submit">Next question</button>
+       </div>
+
+       <div class="results">
+       </div>
 
     </section>
   </main>
@@ -30,7 +30,6 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/handlebars.js"></script>
   <script src="js/app.js"></script>
 </body>
 
