@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="998px" height="1138px" viewBox="0 0 998 1138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15855) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(498.000000, 679.000000) rotate(-45.000000) translate(-498.000000, -679.000000) translate(8.000000, 190.000000)" fill="#000000">
+            <path d="M970.6,9.6 C938.9,-22.1 831.2,34.1 799.4,65.9 L672.4,192.9 L94.3,192.9 C80.6,192.9 68.8,202.7 66.2,216.2 C63.6,229.7 71,243.1 83.8,248.2 L466,399.2 L231.6,633.6 L9.9,633.6 C5.1,633.6 1,637 0.2,641.7 C-0.7,646.4 1.9,651 6.3,652.8 L192.9,726.5 C194,731.2 195.5,735.8 197.4,740.3 L189.2,748.5 C177.6,760.1 177.6,779 189.2,790.6 C200.8,802.2 219.7,802.2 231.3,790.6 L239.3,782.6 C243.8,784.6 248.5,786.2 253.2,787.3 L325.1,971.6 C326.8,976 331.5,978.6 336.2,977.7 C338.2,977.3 340,976.3 341.4,975 C343.2,973.2 344.3,970.7 344.3,968 L344.3,751 L582.4,512.9 L732,896.3 C737,909.1 750.4,916.6 764,914 C769.8,912.9 775,910.1 778.9,906.1 C784.1,900.9 787.3,893.7 787.3,885.8 L787.3,307.8 L914.4,180.7 C946.1,149 1002.3,41.3 970.6,9.6 L970.6,9.6 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
